@@ -1,4 +1,4 @@
-# SwaggerClient::WebhooksApi
+# SezzleClient::WebhooksApi
 
 All URIs are relative to *//sandbox.gateway.sezzle.com/v2/*
 
@@ -16,23 +16,23 @@ Delete webhooks
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'sezzle_client'
 # setup authorization
-SwaggerClient.configure do |config|
+SezzleClient.configure do |config|
   # Configure API key authorization: Bearer
   config.api_key['Authorization'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['Authorization'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::WebhooksApi.new
+api_instance = SezzleClient::WebhooksApi.new
 webhooks_uuid = 'webhooks_uuid_example' # String | Webhooks UUID
 
 
 begin
   #Delete webhooks
   api_instance.delete_v2_webhooks(webhooks_uuid)
-rescue SwaggerClient::ApiError => e
+rescue SezzleClient::ApiError => e
   puts "Exception when calling WebhooksApi->delete_v2_webhooks: #{e}"
 end
 ```
@@ -41,7 +41,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **webhooks_uuid** | **String**| Webhooks UUID | 
+ **webhooks_uuid** | **String**| Webhooks UUID |
 
 ### Return type
 
@@ -66,22 +66,22 @@ List webhooks
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'sezzle_client'
 # setup authorization
-SwaggerClient.configure do |config|
+SezzleClient.configure do |config|
   # Configure API key authorization: Bearer
   config.api_key['Authorization'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['Authorization'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::WebhooksApi.new
+api_instance = SezzleClient::WebhooksApi.new
 
 begin
   #List webhooks
   result = api_instance.get_v2_webhooks
   p result
-rescue SwaggerClient::ApiError => e
+rescue SezzleClient::ApiError => e
   puts "Exception when calling WebhooksApi->get_v2_webhooks: #{e}"
 end
 ```
@@ -112,24 +112,24 @@ Create webhooks
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'sezzle_client'
 # setup authorization
-SwaggerClient.configure do |config|
+SezzleClient.configure do |config|
   # Configure API key authorization: Bearer
   config.api_key['Authorization'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['Authorization'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::WebhooksApi.new
-body = SwaggerClient::Webhook.new # Webhook | Webhooks request
+api_instance = SezzleClient::WebhooksApi.new
+body = SezzleClient::Webhook.new # Webhook | Webhooks request
 
 
 begin
   #Create webhooks
   result = api_instance.post_v2_webhooks(body)
   p result
-rescue SwaggerClient::ApiError => e
+rescue SezzleClient::ApiError => e
   puts "Exception when calling WebhooksApi->post_v2_webhooks: #{e}"
 end
 ```
@@ -138,7 +138,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Webhook**](Webhook.md)| Webhooks request | 
+ **body** | [**Webhook**](Webhook.md)| Webhooks request |
 
 ### Return type
 

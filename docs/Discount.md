@@ -1,8 +1,8 @@
-# SwaggerClient::Discount
+# SezzleClient::Discount
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amount** | [**Price**](Price.md) |  | 
-**name** | **String** |  | 
+**amount** | [**Price**](Price.md) |  |
+**name** | **String** |  |
 

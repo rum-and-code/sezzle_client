@@ -1,4 +1,4 @@
-# SwaggerClient::InstallmentPlan
+# SezzleClient::InstallmentPlan
 
 ## Properties
 Name | Type | Description | Notes

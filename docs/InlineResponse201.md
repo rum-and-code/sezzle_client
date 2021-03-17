@@ -1,9 +1,9 @@
-# SwaggerClient::InlineResponse201
+# SezzleClient::InlineResponse201
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**expiration_date** | **DateTime** |  | [optional] 
-**merchant_uuid** | **String** |  | [optional] 
-**token** | **String** |  | [optional] 
+**expiration_date** | **DateTime** |  | [optional]
+**merchant_uuid** | **String** |  | [optional]
+**token** | **String** |  | [optional]
 

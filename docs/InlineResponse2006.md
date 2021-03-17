@@ -1,7 +1,7 @@
-# SwaggerClient::InlineResponse2006
+# SezzleClient::InlineResponse2006
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**uuid** | **String** |  | [optional] 
+**uuid** | **String** |  | [optional]
 

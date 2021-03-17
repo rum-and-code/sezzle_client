@@ -1,4 +1,4 @@
-# SwaggerClient::SessionApi
+# SezzleClient::SessionApi
 
 All URIs are relative to *//sandbox.gateway.sezzle.com/v2/*
 
@@ -15,16 +15,16 @@ Get session status
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'sezzle_client'
 # setup authorization
-SwaggerClient.configure do |config|
+SezzleClient.configure do |config|
   # Configure API key authorization: Bearer
   config.api_key['Authorization'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['Authorization'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::SessionApi.new
+api_instance = SezzleClient::SessionApi.new
 session_uuid = 'session_uuid_example' # String | Session UUID
 
 
@@ -32,7 +32,7 @@ begin
   #Get session status
   result = api_instance.get_v2_session(session_uuid)
   p result
-rescue SwaggerClient::ApiError => e
+rescue SezzleClient::ApiError => e
   puts "Exception when calling SessionApi->get_v2_session: #{e}"
 end
 ```
@@ -41,7 +41,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **session_uuid** | **String**| Session UUID | 
+ **session_uuid** | **String**| Session UUID |
 
 ### Return type
 
@@ -68,24 +68,24 @@ Create new customer checkout and/or tokenize customer
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'sezzle_client'
 # setup authorization
-SwaggerClient.configure do |config|
+SezzleClient.configure do |config|
   # Configure API key authorization: Bearer
   config.api_key['Authorization'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['Authorization'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::SessionApi.new
-body = SwaggerClient::Session.new # Session | Session request
+api_instance = SezzleClient::SessionApi.new
+body = SezzleClient::Session.new # Session | Session request
 
 
 begin
   #Create a new session
   result = api_instance.post_v2_session(body)
   p result
-rescue SwaggerClient::ApiError => e
+rescue SezzleClient::ApiError => e
   puts "Exception when calling SessionApi->post_v2_session: #{e}"
 end
 ```
@@ -94,7 +94,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Session**](Session.md)| Session request | 
+ **body** | [**Session**](Session.md)| Session request |
 
 ### Return type
 

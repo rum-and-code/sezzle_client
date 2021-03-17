@@ -11,14 +11,14 @@ Swagger Codegen version: 3.0.25
 
 require 'spec_helper'
 
-describe SwaggerClient::Configuration do
-  let(:config) { SwaggerClient::Configuration.default }
+describe SezzleClient::Configuration do
+  let(:config) { SezzleClient::Configuration.default }
 
   before(:each) do
     # uncomment below to setup host and base_path
     # require 'URI'
     # uri = URI.parse("//sandbox.gateway.sezzle.com/v2/")
-    # SwaggerClient.configure do |c|
+    # SezzleClient.configure do |c|
     #   c.host = uri.host
     #   c.base_path = uri.path
     # end

@@ -1,4 +1,4 @@
-# SwaggerClient::Payout
+# SezzleClient::Payout
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::Error
+# SezzleClient::Error
 
 ## Properties
 Name | Type | Description | Notes

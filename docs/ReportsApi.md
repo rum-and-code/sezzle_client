@@ -1,4 +1,4 @@
-# SwaggerClient::ReportsApi
+# SezzleClient::ReportsApi
 
 All URIs are relative to *//sandbox.gateway.sezzle.com/v2/*
 
@@ -17,18 +17,18 @@ Interest Account Activity
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'sezzle_client'
 # setup authorization
-SwaggerClient.configure do |config|
+SezzleClient.configure do |config|
   # Configure API key authorization: Bearer
   config.api_key['Authorization'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['Authorization'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::ReportsApi.new
+api_instance = SezzleClient::ReportsApi.new
 start_date = 'start_date_example' # String | Start Date
-opts = { 
+opts = {
   end_date: 'end_date_example', # String | End Date
   offset: 'offset_example', # String | Pagination Offset (Limit 20)
   currency_code: 'currency_code_example' # String | ISO-4217 Currency Code
@@ -38,7 +38,7 @@ begin
   #Interest Account Activity
   result = api_instance.get_interest_account_activity(start_date, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue SezzleClient::ApiError => e
   puts "Exception when calling ReportsApi->get_interest_account_activity: #{e}"
 end
 ```
@@ -47,10 +47,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_date** | **String**| Start Date | 
- **end_date** | **String**| End Date | [optional] 
- **offset** | **String**| Pagination Offset (Limit 20) | [optional] 
- **currency_code** | **String**| ISO-4217 Currency Code | [optional] 
+ **start_date** | **String**| Start Date |
+ **end_date** | **String**| End Date | [optional]
+ **offset** | **String**| Pagination Offset (Limit 20) | [optional]
+ **currency_code** | **String**| ISO-4217 Currency Code | [optional]
 
 ### Return type
 
@@ -75,17 +75,17 @@ Interest Account Balance
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'sezzle_client'
 # setup authorization
-SwaggerClient.configure do |config|
+SezzleClient.configure do |config|
   # Configure API key authorization: Bearer
   config.api_key['Authorization'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['Authorization'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::ReportsApi.new
-opts = { 
+api_instance = SezzleClient::ReportsApi.new
+opts = {
   currency_code: 'currency_code_example' # String | ISO-4217 Currency Code
 }
 
@@ -93,7 +93,7 @@ begin
   #Interest Account Balance
   result = api_instance.get_interest_account_balance(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue SezzleClient::ApiError => e
   puts "Exception when calling ReportsApi->get_interest_account_balance: #{e}"
 end
 ```
@@ -102,7 +102,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **currency_code** | **String**| ISO-4217 Currency Code | [optional] 
+ **currency_code** | **String**| ISO-4217 Currency Code | [optional]
 
 ### Return type
 
@@ -127,16 +127,16 @@ Settlement Details
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'sezzle_client'
 # setup authorization
-SwaggerClient.configure do |config|
+SezzleClient.configure do |config|
   # Configure API key authorization: Bearer
   config.api_key['Authorization'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['Authorization'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::ReportsApi.new
+api_instance = SezzleClient::ReportsApi.new
 payout_uuid = 'payout_uuid_example' # String | Payout UUID
 
 
@@ -144,7 +144,7 @@ begin
   #Settlement Details
   result = api_instance.get_settlement_details(payout_uuid)
   p result
-rescue SwaggerClient::ApiError => e
+rescue SezzleClient::ApiError => e
   puts "Exception when calling ReportsApi->get_settlement_details: #{e}"
 end
 ```
@@ -153,7 +153,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **payout_uuid** | **String**| Payout UUID | 
+ **payout_uuid** | **String**| Payout UUID |
 
 ### Return type
 
@@ -178,18 +178,18 @@ Settlement Summaries
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'sezzle_client'
 # setup authorization
-SwaggerClient.configure do |config|
+SezzleClient.configure do |config|
   # Configure API key authorization: Bearer
   config.api_key['Authorization'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['Authorization'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::ReportsApi.new
+api_instance = SezzleClient::ReportsApi.new
 start_date = 'start_date_example' # String | Start Date
-opts = { 
+opts = {
   end_date: 'end_date_example', # String | End Date
   offset: 'offset_example', # String | Pagination Offset (Limit 20)
   currency_code: 'currency_code_example' # String | ISO-4217 Currency Code
@@ -199,7 +199,7 @@ begin
   #Settlement Summaries
   result = api_instance.get_settlement_summaries(start_date, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue SezzleClient::ApiError => e
   puts "Exception when calling ReportsApi->get_settlement_summaries: #{e}"
 end
 ```
@@ -208,10 +208,10 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start_date** | **String**| Start Date | 
- **end_date** | **String**| End Date | [optional] 
- **offset** | **String**| Pagination Offset (Limit 20) | [optional] 
- **currency_code** | **String**| ISO-4217 Currency Code | [optional] 
+ **start_date** | **String**| Start Date |
+ **end_date** | **String**| End Date | [optional]
+ **offset** | **String**| Pagination Offset (Limit 20) | [optional]
+ **currency_code** | **String**| ISO-4217 Currency Code | [optional]
 
 ### Return type
 

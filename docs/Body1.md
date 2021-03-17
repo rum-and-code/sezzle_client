@@ -1,7 +1,7 @@
-# SwaggerClient::Body1
+# SezzleClient::Body1
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**reference_id** | **String** |  | [optional] 
+**reference_id** | **String** |  | [optional]
 

@@ -1,4 +1,4 @@
-# SwaggerClient::BearerAuthenticationApi
+# SezzleClient::BearerAuthenticationApi
 
 All URIs are relative to *//sandbox.gateway.sezzle.com/v2/*
 
@@ -14,17 +14,17 @@ Get bearer authentication token
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'sezzle_client'
 
-api_instance = SwaggerClient::BearerAuthenticationApi.new
-body = SwaggerClient::Body.new # Body | Authentication request
+api_instance = SezzleClient::BearerAuthenticationApi.new
+body = SezzleClient::Body.new # Body | Authentication request
 
 
 begin
   #Get bearer authentication token
   result = api_instance.post_v1_authentication(body)
   p result
-rescue SwaggerClient::ApiError => e
+rescue SezzleClient::ApiError => e
   puts "Exception when calling BearerAuthenticationApi->post_v1_authentication: #{e}"
 end
 ```
@@ -33,7 +33,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body**](Body.md)| Authentication request | 
+ **body** | [**Body**](Body.md)| Authentication request |
 
 ### Return type
 

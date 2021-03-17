@@ -1,4 +1,4 @@
-# SwaggerClient::CustomerApi
+# SezzleClient::CustomerApi
 
 All URIs are relative to *//sandbox.gateway.sezzle.com/v2/*
 
@@ -18,23 +18,23 @@ Delete customer
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'sezzle_client'
 # setup authorization
-SwaggerClient.configure do |config|
+SezzleClient.configure do |config|
   # Configure API key authorization: Bearer
   config.api_key['Authorization'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['Authorization'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::CustomerApi.new
+api_instance = SezzleClient::CustomerApi.new
 customer_uuid = 'customer_uuid_example' # String | Customer UUID
 
 
 begin
   #Delete customer
   api_instance.delete_v2_token(customer_uuid)
-rescue SwaggerClient::ApiError => e
+rescue SezzleClient::ApiError => e
   puts "Exception when calling CustomerApi->delete_v2_token: #{e}"
 end
 ```
@@ -43,7 +43,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_uuid** | **String**| Customer UUID | 
+ **customer_uuid** | **String**| Customer UUID |
 
 ### Return type
 
@@ -68,16 +68,16 @@ Get customer
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'sezzle_client'
 # setup authorization
-SwaggerClient.configure do |config|
+SezzleClient.configure do |config|
   # Configure API key authorization: Bearer
   config.api_key['Authorization'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['Authorization'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::CustomerApi.new
+api_instance = SezzleClient::CustomerApi.new
 customer_uuid = 'customer_uuid_example' # String | Customer UUID
 
 
@@ -85,7 +85,7 @@ begin
   #Get customer
   result = api_instance.get_v2_customer(customer_uuid)
   p result
-rescue SwaggerClient::ApiError => e
+rescue SezzleClient::ApiError => e
   puts "Exception when calling CustomerApi->get_v2_customer: #{e}"
 end
 ```
@@ -94,7 +94,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_uuid** | **String**| Customer UUID | 
+ **customer_uuid** | **String**| Customer UUID |
 
 ### Return type
 
@@ -119,22 +119,22 @@ Get list of customers
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'sezzle_client'
 # setup authorization
-SwaggerClient.configure do |config|
+SezzleClient.configure do |config|
   # Configure API key authorization: Bearer
   config.api_key['Authorization'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['Authorization'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::CustomerApi.new
+api_instance = SezzleClient::CustomerApi.new
 
 begin
   #Get list of customers
   result = api_instance.get_v2_customer_list
   p result
-rescue SwaggerClient::ApiError => e
+rescue SezzleClient::ApiError => e
   puts "Exception when calling CustomerApi->get_v2_customer_list: #{e}"
 end
 ```
@@ -165,19 +165,19 @@ Create order by customer
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'sezzle_client'
 # setup authorization
-SwaggerClient.configure do |config|
+SezzleClient.configure do |config|
   # Configure API key authorization: Bearer
   config.api_key['Authorization'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['Authorization'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::CustomerApi.new
+api_instance = SezzleClient::CustomerApi.new
 customer_uuid = 'customer_uuid_example' # String | Customer UUID
-opts = { 
-  body: SwaggerClient::Body2.new # Body2 | Order request
+opts = {
+  body: SezzleClient::Body2.new # Body2 | Order request
   sezzle_request_id: 'sezzle_request_id_example' # String | Unique client-generated ID to enforce idempotency
 }
 
@@ -185,7 +185,7 @@ begin
   #Create order by customer
   result = api_instance.post_v2_customer_order(customer_uuid, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue SezzleClient::ApiError => e
   puts "Exception when calling CustomerApi->post_v2_customer_order: #{e}"
 end
 ```
@@ -194,9 +194,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_uuid** | **String**| Customer UUID | 
- **body** | [**Body2**](Body2.md)| Order request | [optional] 
- **sezzle_request_id** | **String**| Unique client-generated ID to enforce idempotency | [optional] 
+ **customer_uuid** | **String**| Customer UUID |
+ **body** | [**Body2**](Body2.md)| Order request | [optional]
+ **sezzle_request_id** | **String**| Unique client-generated ID to enforce idempotency | [optional]
 
 ### Return type
 
@@ -221,26 +221,26 @@ Preapprove amount by customer
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'sezzle_client'
 # setup authorization
-SwaggerClient.configure do |config|
+SezzleClient.configure do |config|
   # Configure API key authorization: Bearer
   config.api_key['Authorization'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['Authorization'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::CustomerApi.new
+api_instance = SezzleClient::CustomerApi.new
 customer_uuid = 'customer_uuid_example' # String | Customer UUID
-opts = { 
-  body: SwaggerClient::Price.new # Price | Preapproval request
+opts = {
+  body: SezzleClient::Price.new # Price | Preapproval request
 }
 
 begin
   #Preapprove amount by customer
   result = api_instance.preapprove_v2_token(customer_uuid, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue SezzleClient::ApiError => e
   puts "Exception when calling CustomerApi->preapprove_v2_token: #{e}"
 end
 ```
@@ -249,8 +249,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_uuid** | **String**| Customer UUID | 
- **body** | [**Price**](Price.md)| Preapproval request | [optional] 
+ **customer_uuid** | **String**| Customer UUID |
+ **body** | [**Price**](Price.md)| Preapproval request | [optional]
 
 ### Return type
 
