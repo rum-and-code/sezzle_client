@@ -20,9 +20,9 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Swagger-Codegen"]
   s.email       = [""]
-  s.homepage    = "https://github.com/swagger-api/swagger-codegen"
+  s.homepage    = "https://github.com/rum-and-code/sezzle_client"
   s.summary     = "Sezzle API Ruby Gem"
-  s.description = "The Sezzle API is intended for merchants interested in accepting Sezzle Pay as a payment option."
+  s.description = "The Sezzle API is intended for merchants interested in accepting Sezzle Pay as a payment option. This gem was generated from the Sezzle v2 OpenAPI Specification using the Swagger Editor and modified from SwaggerClient to SezzleClient throughout."
   s.license     = "Unlicense"
   s.required_ruby_version = ">= 1.9"
 
